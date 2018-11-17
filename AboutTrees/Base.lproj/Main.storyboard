@@ -1,24 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7w4-4e-hLF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Menu View Controller-->
+        <scene sceneID="jA7-oD-hPb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="7w4-4e-hLF" customClass="MenuViewController" customModule="AboutTrees" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ugM-F8-Egc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oBv-cH-yK8">
+                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKL-M4-SU2" customClass="SectionView" customModule="AboutTrees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="202.5"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qS-5j-G2a" customClass="SectionView" customModule="AboutTrees" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="202.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="free-minimalist-trees-vector" translatesAutoresizingMaskIntoConstraints="NO" id="ZHS-p0-n0W">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="137.5"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Узнай всё о деревьях!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Hxb-G5-5ut">
+                                                        <rect key="frame" x="8" y="174.5" width="327" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Энциклопедия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="rhC-kA-rjb">
+                                                        <rect key="frame" x="8" y="145.5" width="327" height="29"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Hxb-G5-5ut" firstAttribute="top" secondItem="rhC-kA-rjb" secondAttribute="bottom" id="3Y5-Z8-SiR"/>
+                                                    <constraint firstItem="rhC-kA-rjb" firstAttribute="top" secondItem="ZHS-p0-n0W" secondAttribute="bottom" constant="8" id="C2c-d4-laO"/>
+                                                    <constraint firstItem="ZHS-p0-n0W" firstAttribute="top" secondItem="3qS-5j-G2a" secondAttribute="top" id="Ds9-ca-4QY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rhC-kA-rjb" secondAttribute="trailing" constant="8" id="Fff-5b-yrq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Hxb-G5-5ut" secondAttribute="trailing" constant="8" id="L6O-M4-kmh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Hxb-G5-5ut" secondAttribute="bottom" constant="8" id="SP7-ag-wlT"/>
+                                                    <constraint firstItem="Hxb-G5-5ut" firstAttribute="leading" secondItem="3qS-5j-G2a" secondAttribute="leading" constant="8" id="Ufz-bw-8ut"/>
+                                                    <constraint firstItem="rhC-kA-rjb" firstAttribute="leading" secondItem="3qS-5j-G2a" secondAttribute="leading" constant="8" id="Zgm-NL-ZrC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ZHS-p0-n0W" secondAttribute="trailing" id="s7J-R3-lVb"/>
+                                                    <constraint firstItem="ZHS-p0-n0W" firstAttribute="leading" secondItem="3qS-5j-G2a" secondAttribute="leading" id="zwu-K1-NKR"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.6675042981" green="0.41670723250000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="3qS-5j-G2a" firstAttribute="top" secondItem="QKL-M4-SU2" secondAttribute="top" id="B0P-88-xI2"/>
+                                            <constraint firstAttribute="bottom" secondItem="3qS-5j-G2a" secondAttribute="bottom" id="KtP-i2-KOa"/>
+                                            <constraint firstAttribute="trailing" secondItem="3qS-5j-G2a" secondAttribute="trailing" id="Sqg-oe-q1K"/>
+                                            <constraint firstItem="3qS-5j-G2a" firstAttribute="leading" secondItem="QKL-M4-SU2" secondAttribute="leading" id="urL-Ua-B3F"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="NFN-CZ-mxI" appends="YES" id="HH2-oJ-wH7"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqC-vs-uaa" customClass="SectionView" customModule="AboutTrees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="212.5" width="343" height="202"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEk-a4-Ir0" customClass="SectionView" customModule="AboutTrees" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="202"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Do-You-See-the-Forest-or-the-Trees-Quiz-cover-870x400" translatesAutoresizingMaskIntoConstraints="NO" id="3cn-h2-ie3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="137"/>
+                                                        <gestureRecognizers/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Проверь свои знания в викторине" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Rw4-n3-Uym">
+                                                        <rect key="frame" x="8" y="174" width="327" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Викторина" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="ATu-z3-1Ub">
+                                                        <rect key="frame" x="8" y="145" width="327" height="29"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="3cn-h2-ie3" firstAttribute="leading" secondItem="kEk-a4-Ir0" secondAttribute="leading" id="82F-mT-nGE"/>
+                                                    <constraint firstItem="3cn-h2-ie3" firstAttribute="top" secondItem="kEk-a4-Ir0" secondAttribute="top" id="84c-Ys-GNg"/>
+                                                    <constraint firstItem="ATu-z3-1Ub" firstAttribute="top" secondItem="3cn-h2-ie3" secondAttribute="bottom" constant="8" id="91H-zX-cRb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Rw4-n3-Uym" secondAttribute="trailing" constant="8" id="F5w-n4-eeI"/>
+                                                    <constraint firstItem="ATu-z3-1Ub" firstAttribute="leading" secondItem="kEk-a4-Ir0" secondAttribute="leading" constant="8" id="FCw-hW-DQ3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3cn-h2-ie3" secondAttribute="trailing" id="Vny-Sb-bqo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ATu-z3-1Ub" secondAttribute="trailing" constant="8" id="XRj-vB-Vq9"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Rw4-n3-Uym" secondAttribute="bottom" constant="8" id="ds1-5S-IyV"/>
+                                                    <constraint firstItem="Rw4-n3-Uym" firstAttribute="top" secondItem="ATu-z3-1Ub" secondAttribute="bottom" id="ueE-pv-Vc2"/>
+                                                    <constraint firstItem="Rw4-n3-Uym" firstAttribute="leading" secondItem="kEk-a4-Ir0" secondAttribute="leading" constant="8" id="zLc-Cy-tXW"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.6675042981" green="0.41670723250000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="kEk-a4-Ir0" secondAttribute="trailing" id="KCq-H4-XA0"/>
+                                            <constraint firstItem="kEk-a4-Ir0" firstAttribute="top" secondItem="eqC-vs-uaa" secondAttribute="top" id="MO1-vr-hLh"/>
+                                            <constraint firstItem="kEk-a4-Ir0" firstAttribute="leading" secondItem="eqC-vs-uaa" secondAttribute="leading" id="YAf-CZ-JU5"/>
+                                            <constraint firstAttribute="bottom" secondItem="kEk-a4-Ir0" secondAttribute="bottom" id="ikk-CS-qfU"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="n3q-rc-VQ2" appends="YES" id="4bp-c2-Ly9"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xjx-d5-GeG" customClass="SectionView" customModule="AboutTrees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="424.5" width="343" height="202.5"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPi-Mc-pY6" customClass="SectionView" customModule="AboutTrees" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="202.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="fireballtrees" translatesAutoresizingMaskIntoConstraints="NO" id="PYw-Z8-a6W">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="137.5"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Найди растительность рядом" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qcU-dh-Fph">
+                                                        <rect key="frame" x="8" y="174.5" width="327" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карта растительности" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="ow2-xh-X0R">
+                                                        <rect key="frame" x="8" y="145.5" width="327" height="29"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ow2-xh-X0R" firstAttribute="leading" secondItem="lPi-Mc-pY6" secondAttribute="leading" constant="8" id="1JK-y4-f3f"/>
+                                                    <constraint firstItem="ow2-xh-X0R" firstAttribute="top" secondItem="PYw-Z8-a6W" secondAttribute="bottom" constant="8" id="1Pa-M2-CFE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ow2-xh-X0R" secondAttribute="trailing" constant="8" id="2Vl-mk-xUY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="qcU-dh-Fph" secondAttribute="bottom" constant="8" id="4uP-hV-3ct"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PYw-Z8-a6W" secondAttribute="trailing" id="PVO-2X-wMS"/>
+                                                    <constraint firstItem="qcU-dh-Fph" firstAttribute="leading" secondItem="lPi-Mc-pY6" secondAttribute="leading" constant="8" id="R6k-pg-bqa"/>
+                                                    <constraint firstItem="PYw-Z8-a6W" firstAttribute="leading" secondItem="lPi-Mc-pY6" secondAttribute="leading" id="odr-K9-nZV"/>
+                                                    <constraint firstItem="qcU-dh-Fph" firstAttribute="top" secondItem="ow2-xh-X0R" secondAttribute="bottom" id="pnj-pd-UdD"/>
+                                                    <constraint firstItem="PYw-Z8-a6W" firstAttribute="top" secondItem="lPi-Mc-pY6" secondAttribute="top" id="s80-EW-r4q"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qcU-dh-Fph" secondAttribute="trailing" constant="8" id="sxg-pF-Qxu"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.6675042981" green="0.41670723250000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="lPi-Mc-pY6" firstAttribute="leading" secondItem="Xjx-d5-GeG" secondAttribute="leading" id="St3-rS-XD1"/>
+                                            <constraint firstItem="lPi-Mc-pY6" firstAttribute="top" secondItem="Xjx-d5-GeG" secondAttribute="top" id="XFf-Pi-WPo"/>
+                                            <constraint firstAttribute="bottom" secondItem="lPi-Mc-pY6" secondAttribute="bottom" id="aFu-Nb-1ng"/>
+                                            <constraint firstAttribute="trailing" secondItem="lPi-Mc-pY6" secondAttribute="trailing" id="iqS-sq-hy9"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="EBW-dt-Of5" appends="YES" id="kNb-pS-cs1"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kt2-kE-eRZ" firstAttribute="bottom" secondItem="oBv-cH-yK8" secondAttribute="bottom" constant="20" id="4cy-ej-Pl4"/>
+                            <constraint firstItem="oBv-cH-yK8" firstAttribute="leading" secondItem="kt2-kE-eRZ" secondAttribute="leading" constant="16" id="PE2-kK-vY6"/>
+                            <constraint firstItem="oBv-cH-yK8" firstAttribute="top" secondItem="kt2-kE-eRZ" secondAttribute="top" id="owM-Dm-L9y"/>
+                            <constraint firstItem="kt2-kE-eRZ" firstAttribute="trailing" secondItem="oBv-cH-yK8" secondAttribute="trailing" constant="16" id="r83-li-rJs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kt2-kE-eRZ"/>
                     </view>
+                    <connections>
+                        <outlet property="encSV" destination="QKL-M4-SU2" id="kj1-hs-dHe"/>
+                        <outlet property="mapSV" destination="Xjx-d5-GeG" id="r94-2f-kYQ"/>
+                        <outlet property="quizSV" destination="eqC-vs-uaa" id="j6K-3W-IxP"/>
+                        <segue destination="L0N-w2-Rt9" kind="show" identifier="toEnc" animates="NO" id="YLr-ji-2kN"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ey-qF-24J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NFN-CZ-mxI" userLabel="First section">
+                    <connections>
+                        <action selector="sectionTapped:" destination="7w4-4e-hLF" id="eJ9-rS-bdv"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="n3q-rc-VQ2" userLabel="Second section">
+                    <connections>
+                        <action selector="sectionTapped:" destination="7w4-4e-hLF" id="iDa-PD-Eyk"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="EBW-dt-Of5" userLabel="Third section">
+                    <connections>
+                        <action selector="sectionTapped:" destination="7w4-4e-hLF" id="pcA-y9-J7x"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="116" y="125.4872563718141"/>
+        </scene>
+        <!--Encyclopedia Collection View Controller-->
+        <scene sceneID="8xx-r4-acb">
+            <objects>
+                <collectionViewController id="L0N-w2-Rt9" customClass="EncyclopediaCollectionViewController" customModule="AboutTrees" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jwD-3F-tyV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Pfs-n3-3iG">
+                            <size key="itemSize" width="120" height="122"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TreeCell" id="XKW-74-9v6">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="122"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="L0N-w2-Rt9" id="uAR-Cw-Gjl"/>
+                            <outlet property="delegate" destination="L0N-w2-Rt9" id="FM4-Es-vc3"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PmQ-wR-ZjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.79999999999995" y="-598.65067466266873"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Do-You-See-the-Forest-or-the-Trees-Quiz-cover-870x400" width="579" height="399"/>
+        <image name="fireballtrees" width="968" height="541"/>
+        <image name="free-minimalist-trees-vector" width="700" height="490"/>
+    </resources>
 </document>
